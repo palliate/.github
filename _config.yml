@@ -7,4 +7,4 @@ aux_links:
   '<button type="button" name="button" class="btn btn-green">Palliate on Github</button>':
     - "//github.com/palliate/palliate"
 
-#title: "palliate"
+logo: "logo.svg"
