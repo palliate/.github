@@ -1,4 +1,5 @@
 ## Palliate
+[![CMake](https://github.com/Tsche/palliate/actions/workflows/cmake.yml/badge.svg?branch=master)](https://github.com/Tsche/palliate/actions/workflows/cmake.yml)
 
 ```
 palliate
