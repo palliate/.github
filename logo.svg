@@ -4,7 +4,7 @@
     viewBox="0 0 250 48" 
     xml:space="preserve">
     <g id="logo">
-        <image x="0" y="0" width="48" height="48" xlink:href="icon.svg" />
+        <image x="0" y="0" width="48" height="48" xlink:href="./icon.svg" />
         <style>
             .name { font: bold 47px sans-serif;}
         </style>
