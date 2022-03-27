@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48">
     <g id="logo">
-        <image width="48" height="48" href="https://palliate.io/icon.svg" />
+        <image width="48" height="48" href="/icon.svg" />
         <style>
             .name { font: bold 47px sans-serif;}
         </style>
