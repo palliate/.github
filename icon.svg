@@ -1,4 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+    <style>
+        path { fill: #000000; }
+        @media (prefers-color-scheme: dark) {
+            path { fill: #ffffff; }
+        }
+    </style>
     <defs>
         <path id="network" d="
             m  0        0
