@@ -1,7 +1,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
     x="0px"         y="0px" 
-    width="250px"   height="48px" 
-    viewBox="0 0 250 48" 
+    width="220px"   height="48px" 
+    viewBox="0 0 220 48" 
     xml:space="preserve">
     <g id="logo">
         <g id="icon">
@@ -162,6 +162,6 @@
         <style>
             .name { font: bold 47px sans-serif;}
         </style>
-        <text x="50" y="37" class="name">palliate</text>
+        <text x="55" y="37" class="name">palliate</text>
     </g>
 </svg>
