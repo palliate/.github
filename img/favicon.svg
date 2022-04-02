@@ -1,10 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
     <style>
-        path { fill: #000000; }
+        svg {
+            color-scheme: light dark;
+        }
+
+        path {
+            fill: black;
+        }
+
         @media (prefers-color-scheme: dark) {
-            path { fill: #ffffff; }
+            path {
+                fill: white;
+            }
         }
     </style>
+
     <defs>
         <path id="network" d="
             m  0        0
@@ -63,10 +73,9 @@
                 z" />
         </g>
     </defs>
+
     <g id="icon">
-        <use x="13.5" y="18" href="#monitors" /> <!-- top monitor          -->
-        <use x="1"    y="43" href="#monitor"  /> <!-- left bottom monitor  -->
-        <use x="26"   y="43" href="#monitor"  /> <!-- right bottom monitor -->
-        <use x="6.5"  y="26" href="#network"  /> <!-- network bus          -->
+        <use x="2" y="18" href="#monitors" /> <!-- top monitor          -->
+        <use x="-5" y="26" href="#network" /> <!-- network bus          -->
     </g>
 </svg>
