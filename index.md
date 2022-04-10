@@ -1,3 +1,9 @@
+---
+title: Home
+has_children: false
+nav_order: 1
+---
+
 ## Palliate
 [![CMake](https://github.com/palliate/palliate/actions/workflows/cmake.yml/badge.svg?branch=master)](https://github.com/palliate/palliate/actions/workflows/cmake.yml)
 
