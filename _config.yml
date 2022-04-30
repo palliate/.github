@@ -9,7 +9,21 @@ aux_links:
 
 title: palliate
 logo: "/img/logo.svg"
+back_to_top: true
+back_to_top_text: "Back to top"
 
 # Google Analytics Tracking
 ga_tracking: G-P59SQH9P9E
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings
+
+collections:
+  libpalliate:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  collections:
+    libpalliate:
+      name: "libpalliate Documentation"
+      nav_exclude: false
+      search_exclude: false
