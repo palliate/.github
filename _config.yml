@@ -17,13 +17,21 @@ ga_tracking: G-P59SQH9P9E
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings
 
 collections:
+  project:
+    permalink: "/:collection/:path/"
+    output: true
   libpalliate:
     permalink: "/:collection/:path/"
     output: true
 
 just_the_docs:
   collections:
+    project:
+      name: "palliate project"
+      nav_exclude: false
+      search_exclude: false
+
     libpalliate:
-      name: "libpalliate Documentation"
+      name: "libpalliate documentation"
       nav_exclude: false
       search_exclude: false
