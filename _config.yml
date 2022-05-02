@@ -8,6 +8,7 @@ aux_links:
     - "//github.com/palliate/palliate"
 
 title: palliate
+description: "palliate is a low latency frame relay that preserves window management metadata"
 logo: "/img/logo.svg"
 back_to_top: true
 back_to_top_text: "Back to top"
@@ -15,3 +16,10 @@ back_to_top_text: "Back to top"
 # Google Analytics Tracking
 ga_tracking: G-P59SQH9P9E
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings
+
+# disable line numbers
+# otherwise most of doxygen's generated pages will look bad on small screens
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
