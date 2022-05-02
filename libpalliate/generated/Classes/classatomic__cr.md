@@ -24,7 +24,7 @@ layout: default
 
 |                | Name           |
 | -------------- | -------------- |
-| enum unsigned | **[@2](/libpalliate/generated/Classes/classatomic__cr#enum-@2)** { UNUSED = 0ul} |
+| enum unsigned | **[@0](/libpalliate/generated/Classes/classatomic__cr#enum-@0)** { UNUSED = 0ul} |
 | using unsigned | **[request_t](/libpalliate/generated/Classes/classatomic__cr#using-request-t)**  |
 | using unsigned | **[response_t](/libpalliate/generated/Classes/classatomic__cr#using-response-t)**  |
 
@@ -52,7 +52,7 @@ class atomic_cr;
 
 ## Public Types Documentation
 
-### enum @2
+### enum @0
 
 | Enumerator | Value | Description |
 | ---------- | ----- | ----------- |
@@ -119,4 +119,4 @@ std::atomic< unsigned > * count = 0;
 
 
 
-_Automatically updated on 2022-05-02 at 01:42:11 +0000._
+_Automatically updated on 2022-05-02 at 01:49:10 +0000._

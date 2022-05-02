@@ -25,7 +25,7 @@ layout: default
 
 |                | Name           |
 | -------------- | -------------- |
-| enum unsigned | **[@3](/libpalliate/generated/Namespaces/namespacememory#enum-@3)** { UNUSED = 0ul, INVALID = UINT32_MAX, CLAIM = 1ul << 31, WAIVE = 1ul << 30, PRINT = 1ul << 29} |
+| enum unsigned | **[@1](/libpalliate/generated/Namespaces/namespacememory#enum-@1)** { UNUSED = 0ul, INVALID = UINT32_MAX, CLAIM = 1ul << 31, WAIVE = 1ul << 30, PRINT = 1ul << 29} |
 | using unsigned | **[offset_t](/libpalliate/generated/Namespaces/namespacememory#using-offset-t)**  |
 
 ## Attributes
@@ -36,7 +36,7 @@ layout: default
 
 ## Types Documentation
 
-### enum @3
+### enum @1
 
 | Enumerator | Value | Description |
 | ---------- | ----- | ----------- |
@@ -71,4 +71,4 @@ static constexpr unsigned MAGIC = 0xC0FFEEul;
 
 
 
-_Automatically updated on 2022-05-02 at 01:42:11 +0000._
+_Automatically updated on 2022-05-02 at 01:49:10 +0000._
