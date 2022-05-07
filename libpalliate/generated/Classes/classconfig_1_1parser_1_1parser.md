@@ -48,7 +48,7 @@ virtual config::value_t get(
 ```
 
 
-**Reimplemented by**: [config::parser::settings::get](/libpalliate/generated/Classes/classconfig_1_1parser_1_1settings#function-get), [config::parser::cli::get](/libpalliate/generated/Classes/classconfig_1_1parser_1_1cli#function-get)
+**Reimplemented by**: [config::parser::cli::get](/libpalliate/generated/Classes/classconfig_1_1parser_1_1cli#function-get), [config::parser::settings::get](/libpalliate/generated/Classes/classconfig_1_1parser_1_1settings#function-get)
 
 
 ### function print
@@ -68,4 +68,4 @@ std::map< std::string, config::value_t > options;
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._

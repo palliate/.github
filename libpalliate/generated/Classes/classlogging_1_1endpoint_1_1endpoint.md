@@ -41,8 +41,8 @@ virtual void print(
 ```
 
 
-**Reimplemented by**: [logging::endpoint::terminal::print](/libpalliate/generated/Classes/classlogging_1_1endpoint_1_1terminal#function-print), [logging::endpoint::systemd::print](/libpalliate/generated/Classes/classlogging_1_1endpoint_1_1systemd#function-print), [logging::endpoint::file::print](/libpalliate/generated/Classes/classlogging_1_1endpoint_1_1file#function-print)
+**Reimplemented by**: [logging::endpoint::file::print](/libpalliate/generated/Classes/classlogging_1_1endpoint_1_1file#function-print), [logging::endpoint::systemd::print](/libpalliate/generated/Classes/classlogging_1_1endpoint_1_1systemd#function-print), [logging::endpoint::terminal::print](/libpalliate/generated/Classes/classlogging_1_1endpoint_1_1terminal#function-print)
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._

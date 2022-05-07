@@ -91,9 +91,11 @@ std::atomic< response_t > * resp = nullptr;
 ### friend atomic_cr
 
 ```cpp
-friend class atomic_cr;
+friend class atomic_cr(
+    atomic_cr 
+);
 ```
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._

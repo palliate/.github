@@ -25,7 +25,7 @@ Inherits from [runnable](/libpalliate/generated/Classes/classrunnable)
 | | **[ui](/libpalliate/generated/Classes/classui#function-ui)**([ui](/libpalliate/generated/Classes/classui) const & ) =delete |
 | void | **[operator=](/libpalliate/generated/Classes/classui#function-operator=)**([ui](/libpalliate/generated/Classes/classui) const & ) =delete |
 | | **[~ui](/libpalliate/generated/Classes/classui#function-~ui)**() |
-| template <class T ,typename... Args\> <br>| **[requires](/libpalliate/generated/Classes/classui#function-requires)**(std::derived_from< T, [backend](/libpalliate/generated/Classes/classbackend) > ) |
+| template <class T ,typename... Args\> <br>void | **[attach](/libpalliate/generated/Classes/classui#function-attach)**(Args... args) |
 
 ## Additional inherited members
 
@@ -46,7 +46,7 @@ Inherits from [runnable](/libpalliate/generated/Classes/classrunnable)
 | void | **[run](/libpalliate/generated/Classes/classrunnable#function-run)**() |
 | void | **[run](/libpalliate/generated/Classes/classrunnable#function-run)**([callback_f](/libpalliate/generated/Classes/classrunnable#using-callback-f) _callback) |
 | void | **[stop](/libpalliate/generated/Classes/classrunnable#function-stop)**() |
-| auto | **[operator](/libpalliate/generated/Classes/classrunnable#function-operator)**([runnable](/libpalliate/generated/Classes/classrunnable) const & other) const |
+| auto | **[operator<=>](/libpalliate/generated/Classes/classrunnable#function-operator<=>)**([runnable](/libpalliate/generated/Classes/classrunnable) const & other) const |
 
 **Protected Attributes inherited from [runnable](/libpalliate/generated/Classes/classrunnable)**
 
@@ -98,16 +98,16 @@ void operator=(
 ```
 
 
-### function requires
+### function attach
 
 ```cpp
 template <class T ,
 typename... Args>
-requires(
-    std::derived_from< T, backend > 
+void attach(
+    Args... args
 )
 ```
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._

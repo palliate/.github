@@ -33,7 +33,7 @@ Inherited by [consumer](/libpalliate/generated/Classes/classconsumer), [producer
 | void | **[run](/libpalliate/generated/Classes/classrunnable#function-run)**() |
 | void | **[run](/libpalliate/generated/Classes/classrunnable#function-run)**([callback_f](/libpalliate/generated/Classes/classrunnable#using-callback-f) _callback) |
 | void | **[stop](/libpalliate/generated/Classes/classrunnable#function-stop)**() |
-| auto | **[operator](/libpalliate/generated/Classes/classrunnable#function-operator)**([runnable](/libpalliate/generated/Classes/classrunnable) const & other) const |
+| auto | **[operator<=>](/libpalliate/generated/Classes/classrunnable#function-operator<=>)**([runnable](/libpalliate/generated/Classes/classrunnable) const & other) const |
 
 ## Protected Functions
 
@@ -115,10 +115,10 @@ void stop()
 ```
 
 
-### function operator
+### function operator<=>
 
 ```cpp
-auto operator(
+auto operator<=>(
     runnable const & other
 ) const
 ```
@@ -133,7 +133,7 @@ virtual bool loop() =0
 ```
 
 
-**Reimplemented by**: [transport::client::loop](/libpalliate/generated/Classes/classtransport_1_1client#function-loop), [consumer::loop](/libpalliate/generated/Classes/classconsumer#function-loop), [transport::tcp::server::loop](/libpalliate/generated/Classes/classtransport_1_1tcp_1_1server#function-loop), [producer::loop](/libpalliate/generated/Classes/classproducer#function-loop), [ui::loop](/libpalliate/generated/Classes/classui#function-loop)
+**Reimplemented by**: [transport::client::loop](/libpalliate/generated/Classes/classtransport_1_1client#function-loop), [consumer::loop](/libpalliate/generated/Classes/classconsumer#function-loop), [producer::loop](/libpalliate/generated/Classes/classproducer#function-loop), [transport::tcp::server::loop](/libpalliate/generated/Classes/classtransport_1_1tcp_1_1server#function-loop), [ui::loop](/libpalliate/generated/Classes/classui#function-loop)
 
 
 ## Protected Attributes Documentation
@@ -160,4 +160,4 @@ const std::string name;
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._

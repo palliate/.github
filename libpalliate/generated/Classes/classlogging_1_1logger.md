@@ -25,7 +25,7 @@ layout: default
 | | **[~logger](/libpalliate/generated/Classes/classlogging_1_1logger#function-~logger)**() |
 | void | **[register_thread](/libpalliate/generated/Classes/classlogging_1_1logger#function-register-thread)**(std::thread::id thread_id, std::string_view name) |
 | void | **[print](/libpalliate/generated/Classes/classlogging_1_1logger#function-print)**([message](/libpalliate/generated/Classes/structlogging_1_1message) & msg) |
-| template <class T ,typename... Args\> <br>| **[requires](/libpalliate/generated/Classes/classlogging_1_1logger#function-requires)**(std::derived_from< T, [endpoint::endpoint](/libpalliate/generated/Classes/classlogging_1_1endpoint_1_1endpoint) > ) |
+| template <class T ,typename... Args\> <br>void | **[attach](/libpalliate/generated/Classes/classlogging_1_1logger#function-attach)**(Args... args) |
 | void | **[enable](/libpalliate/generated/Classes/classlogging_1_1logger#function-enable)**() |
 | std::string | **[get_name](/libpalliate/generated/Classes/classlogging_1_1logger#function-get-name)**(std::thread::id thread_id) |
 
@@ -97,13 +97,13 @@ void print(
 ```
 
 
-### function requires
+### function attach
 
 ```cpp
 template <class T ,
 typename... Args>
-requires(
-    std::derived_from< T, endpoint::endpoint > 
+void attach(
+    Args... args
 )
 ```
 
@@ -134,4 +134,4 @@ severity min_level = severity::warning;
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._

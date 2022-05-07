@@ -33,8 +33,8 @@ layout: default
 | [leaf_t](/libpalliate/generated/Classes/structpatricia_1_1leaf__t) * | **[find_last](/libpalliate/generated/Classes/classpatricia#function-find-last)**() |
 | [leaf_t](/libpalliate/generated/Classes/structpatricia_1_1leaf__t) * | **[find_first](/libpalliate/generated/Classes/classpatricia#function-find-first)**() |
 | [leaf_t](/libpalliate/generated/Classes/structpatricia_1_1leaf__t) * | **[find](/libpalliate/generated/Classes/classpatricia#function-find)**([pkey_t](/libpalliate/generated/Files/patricia_8h#using-pkey-t) key) |
-| template <class T \> <br>| **[requires](/libpalliate/generated/Classes/classpatricia#function-requires)**(std::derived_from< T, [patricia::leaf_t](/libpalliate/generated/Classes/structpatricia_1_1leaf__t) > ) |
-| template <class T \> <br>| **[requires](/libpalliate/generated/Classes/classpatricia#function-requires)**(std::derived_from< T, [patricia::leaf_t](/libpalliate/generated/Classes/structpatricia_1_1leaf__t) > ) |
+| template <class T \> <br>bool | **[insert](/libpalliate/generated/Classes/classpatricia#function-insert)**(T * value) |
+| template <class T \> <br>void | **[remove](/libpalliate/generated/Classes/classpatricia#function-remove)**(T * value) |
 | void | **[remove](/libpalliate/generated/Classes/classpatricia#function-remove)**([pkey_t](/libpalliate/generated/Files/patricia_8h#using-pkey-t) key) |
 | void | **[clear](/libpalliate/generated/Classes/classpatricia#function-clear)**() |
 | void | **[print](/libpalliate/generated/Classes/classpatricia#function-print)**() |
@@ -96,22 +96,22 @@ leaf_t * find(
 ```
 
 
-### function requires
+### function insert
 
 ```cpp
 template <class T >
-requires(
-    std::derived_from< T, patricia::leaf_t > 
+bool insert(
+    T * value
 )
 ```
 
 
-### function requires
+### function remove
 
 ```cpp
 template <class T >
-requires(
-    std::derived_from< T, patricia::leaf_t > 
+void remove(
+    T * value
 )
 ```
 
@@ -140,4 +140,4 @@ void print()
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._

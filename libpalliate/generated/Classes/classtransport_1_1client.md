@@ -59,7 +59,7 @@ Inherited by [transport::tcp::client](/libpalliate/generated/Classes/classtransp
 | void | **[run](/libpalliate/generated/Classes/classrunnable#function-run)**() |
 | void | **[run](/libpalliate/generated/Classes/classrunnable#function-run)**([callback_f](/libpalliate/generated/Classes/classrunnable#using-callback-f) _callback) |
 | void | **[stop](/libpalliate/generated/Classes/classrunnable#function-stop)**() |
-| auto | **[operator](/libpalliate/generated/Classes/classrunnable#function-operator)**([runnable](/libpalliate/generated/Classes/classrunnable) const & other) const |
+| auto | **[operator<=>](/libpalliate/generated/Classes/classrunnable#function-operator<=>)**([runnable](/libpalliate/generated/Classes/classrunnable) const & other) const |
 
 **Protected Attributes inherited from [runnable](/libpalliate/generated/Classes/classrunnable)**
 
@@ -140,4 +140,4 @@ bool packed;
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._

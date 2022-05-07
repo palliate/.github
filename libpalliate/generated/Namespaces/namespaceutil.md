@@ -38,14 +38,14 @@ layout: default
 | bool | **[iequal](/libpalliate/generated/Namespaces/namespaceutil#function-iequal)**(std::string_view lhs, std::string_view rhs) |
 | bool | **[to_bool](/libpalliate/generated/Namespaces/namespaceutil#function-to-bool)**(std::string_view str) |
 | int | **[to_int](/libpalliate/generated/Namespaces/namespaceutil#function-to-int)**(std::string_view str) |
-| template <typename K ,typename V \> <br>| **[requires](/libpalliate/generated/Namespaces/namespaceutil#function-requires)**(std::same_as< K, std::string >||std::same_as< K, std::string_view > ) |
-| template <typename T \> <br>| **[requires](/libpalliate/generated/Namespaces/namespaceutil#function-requires)**(std::integral< T > ) |
+| template <typename K ,typename V \> <br>size_t | **[max_key_length](/libpalliate/generated/Namespaces/namespaceutil#function-max-key-length)**(std::map< K, V > storage) |
+| template <typename T \> <br>std::string | **[print_binary](/libpalliate/generated/Namespaces/namespaceutil#function-print-binary)**(T number, bool ommit_trailing_zero =false, bool ommit_trailing_one =false, int mask_after =-1) |
 
 ## Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| constexpr static std::string_view | **[library_extension](/libpalliate/generated/Namespaces/namespaceutil#variable-library-extension)**  |
+| constexpr std::string_view | **[library_extension](/libpalliate/generated/Namespaces/namespaceutil#variable-library-extension)**  |
 
 
 ## Functions Documentation
@@ -175,23 +175,26 @@ inline int to_int(
 ```
 
 
-### function requires
+### function max_key_length
 
 ```cpp
 template <typename K ,
 typename V >
-requires(
-    std::same_as< K, std::string >||std::same_as< K, std::string_view > 
+inline size_t max_key_length(
+    std::map< K, V > storage
 )
 ```
 
 
-### function requires
+### function print_binary
 
 ```cpp
 template <typename T >
-requires(
-    std::integral< T > 
+std::string print_binary(
+    T number,
+    bool ommit_trailing_zero =false,
+    bool ommit_trailing_one =false,
+    int mask_after =-1
 )
 ```
 
@@ -202,7 +205,7 @@ requires(
 ### variable library_extension
 
 ```cpp
-static constexpr static std::string_view library_extension = ".so";
+static constexpr std::string_view library_extension = ".so";
 ```
 
 
@@ -210,4 +213,4 @@ static constexpr static std::string_view library_extension = ".so";
 
 
 
-_Automatically updated on 2022-05-07 at 23:14:50 +0000._
+_Automatically updated on 2022-05-07 at 23:35:51 +0000._
