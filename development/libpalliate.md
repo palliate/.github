@@ -1,7 +1,7 @@
 ---
 layout: default
 title: libpalliate
-parent: development
+parent: Development
 nav_order: 25
 has_children: true
 permalink: /development/libpalliate

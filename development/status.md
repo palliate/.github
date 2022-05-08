@@ -3,7 +3,7 @@ layout: default
 title: Status
 has_children: false
 nav_order: 21
-parent: development
+parent: Development
 permalink: /development/status
 ---
 
