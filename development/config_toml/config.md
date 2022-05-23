@@ -84,7 +84,7 @@ struct name {
 
     _setting.comments().push_back("Setting comment");
 
-    toml::basic_value<toml::preserve_comments> node{{"setting", _setting}};
+    toml::basic_value<toml::preserve_comments> node{ {"setting", _setting} };
     table.comments().push_back("Comment for this node");
     return node;
   }
