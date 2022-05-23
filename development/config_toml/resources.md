@@ -3,6 +3,7 @@ layout: default
 title: resources
 has_children: false
 parent: config.toml
+grand_parent: Development
 permalink: /development/resources
 ---
 

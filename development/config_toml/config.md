@@ -3,6 +3,7 @@ layout: default
 title: config
 has_children: false
 parent: config.toml
+grand_parent: Development
 permalink: /development/config
 ---
 
