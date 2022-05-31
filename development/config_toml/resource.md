@@ -4,7 +4,7 @@ title: resource
 has_children: false
 parent: config.toml
 grand_parent: Development
-permalink: /development/resources
+permalink: /development/resource
 ---
 
 # resource table

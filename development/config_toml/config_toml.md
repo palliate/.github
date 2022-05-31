@@ -17,7 +17,7 @@ This page is meant to document how `config.toml` files are used - if you are int
 
 Each `config.toml` file may define subtables within these tables:
 * [config](/development/config)
-* [resources](/development/resources)
+* [resource](/development/resource)
 * [build](/development/build)
 
 Example:
