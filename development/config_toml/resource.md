@@ -1,13 +1,13 @@
 ---
 layout: default
-title: resources
+title: resource
 has_children: false
 parent: config.toml
 grand_parent: Development
 permalink: /development/resources
 ---
 
-# resources table
+# resource table
 Embeds files into the resulting binary. This is useful for embedding small icons, shader code etc.
 
 ## Format
@@ -31,10 +31,12 @@ Assuming file.txt contains the text `che` this would generate:
 #pragma once
 #include <cstdint>
 
+namespace config {
 namespace resource {
-  constexpr uint8_t name[] = {
-    99, 104, 101, 10, 
+  static constexpr uint8_t name[] = {
+    99, 104, 101,
   };
   // ...
 } // namespace resource
+} // namespace config
 ```

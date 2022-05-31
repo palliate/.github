@@ -15,35 +15,46 @@ If a variable within one of these subtables has `cli = true` defined, an entry w
 
 ## Format
 ```toml
-# class name within config namespace
-[config.name]
+# name of this config
+# the class and filename of the generated header
+# will be derived from this
+# in this example it'd generated
+# /config/foobar.h which contains the class config::foobar
+[config.foobar]
   # place a comment at the node root
   # type: string, None
   comment = "Comment for this node" # optional
 
-  # include the listed files
+  # include the listed headers
   # type: array<string>, None
   requires = ["config/uuid.h", "cstdbool"] # optional
 
   # define variable with name setting
-  # names across CLI arguments should be unique
-  # since they will be used as longopt key
-  [config.name.setting]
+
+  [[config.foobar.settings]]
+    # name for this setting
+    # names within settings of this config need to be unique
+    # names across CLI arguments need to be unique
+    # since they will be used as longopt key
+    # type:    string
+    name = "foo"
+
     # c++ type of this setting
     # type:    string
     type = "int"
 
     # place a comment at this setting
     # will be used for --help if cli = true
-    # type: string, None
+    # can be multiline
+    # type:    string, None
     comment = "Setting comment" # optional
 
     # whether this setting should be written to the config file
-    # set this to false for non-persistant cli options
+    # set this to false for non-persistent cli options
     # type:    bool, None
     # default: true
     save = true # optional
-   
+
     # whether this setting should be overridable using command line arguments
     # type:    bool, None
     # default: false
@@ -55,16 +66,21 @@ If a variable within one of these subtables has `cli = true` defined, an entry w
     shorthand = "s" # optional
 
     # default value to use
-    # if none is given this setting
+    # if none is given this setting will be considered optional
     # interpreted as inline c++ if type is array<string>
     # type:    array<string>, string, bool, int, None
     default = ["int{}"] # optional
+
+  # minimal example
+  [[config.foobar.settings]]
+    type = "int"
+    name = "minimal"
 ```
 
 This would generate
 
 ```cpp
-// <build>/generated/config/name.h
+// <build>/generated/config/foobar.h
 
 #pragma once
 #include <toml11/toml.hpp>
@@ -72,44 +88,68 @@ This would generate
 #include <cstdbool>
 
 namespace config {
-struct name {
-  int setting = int{};
+struct  {
+    int foo = int{};
+    int minimal;
 
-  void from_toml(const toml::value& node) {
-    setting = toml::find<int>(node, "setting");
+  void from_toml(const toml::value& v) {
+    foo = toml::find_or<int>(v, "foo", int{});
+    minimal = toml::find<int>(v, "minimal");
+    
   }
 
   toml::basic_value<toml::preserve_comments> into_toml() const {
-    toml::basic_value<toml::preserve_comments> _setting(setting);
-
-    _setting.comments().push_back("Setting comment");
-
-    toml::basic_value<toml::preserve_comments> node{ {"setting", _setting} };
-    table.comments().push_back("Comment for this node");
-    return node;
+    toml::basic_value<toml::preserve_comments> _foo{foo};
+    _foo.comments().push_back(R"""(Setting comment)""");
+    
+    toml::basic_value<toml::preserve_comments> _minimal{minimal};
+    
+    toml::basic_value<toml::preserve_comments> table{
+      {"foo", _foo},
+      {"minimal", _minimal},
+    };
+    table.comments().push_back(R"""(Comment for this node)""");
+    return table;
   }
 };
 }  // namespace config
+
 
 ```
 and
 ```cpp
 // <build>/generated/cli.h
 #pragma once
-#include <unordered_map>
 #include <string>
-#include <variant>
+#include <unordered_map>
+#include <map>
+#include <optional>
+#include <string_view>
 
 namespace config {
-  const std::unordered_map<std::string, config::cli_option> cli_options = {
-    {"config.name.setting",
-      {.name = "setting",
-       .comment = "Setting comment",
-       .default_value = int{},
-       .shorthand = "s"
-      }
-    },
+using namespace std::string_view_literals;
+struct cli_option {
+  std::string_view table;
+  std::optional<char const> shorthand;
+  std::string_view description = ""sv;
+};
+
+static const std::map<char, const std::string> cli_shorthands = {
+  // ...
+  {'s', "foo"},
+  // ...
+};
+
+static const std::unordered_map<const std::string, cli_option> cli_map = {
     // ...
-  }
-} // namespace config
+    {"foo",
+     {
+         .table = "foobar"sv,
+         .shorthand = 's',
+         .description = R"""(Setting comment)"""sv,
+     }},
+     // ...
+};
+}  // namespace config
+
 ```

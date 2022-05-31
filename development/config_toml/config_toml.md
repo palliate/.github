@@ -18,19 +18,20 @@ This page is meant to document how `config.toml` files are used - if you are int
 Each `config.toml` file may define subtables within these tables:
 * [config](/development/config)
 * [resources](/development/resources)
-
-[build](/development/build) is special in that it may only be defined within one `config.toml` file within the project. This means you should never define this in a plugin or in the library.
+* [build](/development/build)
 
 Example:
 ```toml
-[build]
-project = "test"
+[build.test]
+  version = "v0.1.0"
 
-[config.help]
-type    = "bool"
-cli     = true
-default = false
+[config.foobar]
+  [[config.foobar.settings]]
+    name = "foo"
+    type = "bool"
+    cli = true
+    default = false
 
-[resources.icon]
+[resource.icon]
 path    = "app/icon.ico"
 ```
