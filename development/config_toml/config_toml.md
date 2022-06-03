@@ -23,6 +23,7 @@ Each `config.toml` file may define subtables within these tables:
 Example:
 ```toml
 [build.test]
+  type = "application"
   version = "v0.1.0"
 
 [config.foobar]
@@ -33,5 +34,5 @@ Example:
     default = false
 
 [resource.icon]
-path    = "app/icon.ico"
+path = "app/icon.ico"
 ```

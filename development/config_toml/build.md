@@ -15,9 +15,16 @@ Subtables of `build` define metadata for a (sub)project.
 ```toml
 # pull metadata for a project named project_name
 [build.project_name]
+  # type of this build
+  # can be either application, library or plugin
+  # only one application and one library build may exist
+  # type: string
+  type = "application"
+
   # current version number for this project
   # please use semantic versioning for this
   # see https://semver.org/
+  # type: string
   version = "v0.0.1"
 
   # specify root directory relative to this config file
@@ -40,9 +47,9 @@ might generate something like
 #pragma once
 #include <optional>
 #include <string_view>
-#include <unordered_map>
 
 namespace config {
+namespace build {
 struct build_info {
   struct git_info {
     std::string_view remote_url;
@@ -59,17 +66,24 @@ struct build_info {
   const std::optional<git_info> git;
 };
 
-const std::unordered_map<std::string_view, build_info> builds = {
-    {"project_name",
-     {.root = R"(/path/to/this/project/src)",
-      .version = "v0.0.1",
-      .git = {{.remote_url = R"(git@github.com:user/repo.git)",
-               .web_url = R"(https://github.com/user/repo)",
-               .branch = "master",
-               .commit = "f4630ba7ce9a4c89aecbb42a276182b9f310130a",
-               .commit_short = "f4630ba",
-               .modified = true}}}},
+static const build_info application = {
+    {.name = "project_name",
+     .root = R"(/path/to/this/project)",
+     .version = "v0.0.1",
+     .git = {{.remote_url = R"(git@github.com:user/repo.git)",
+              .web_url = R"(https://github.com/user/repo)",
+              .branch = "master",
+              .commit = "f4630ba7ce9a4c89aecbb42a276182b9f310130a",
+              .commit_short = "f4630ba",
+              .modified = true}}}},
 };
+
+static const build_info library = {
+};
+
+static const build_info plugins[] = {
+};
+}  // namespace build
 }  // namespace config
 
 ```

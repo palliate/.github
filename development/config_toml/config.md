@@ -71,6 +71,12 @@ If a variable within one of these subtables has `cli = true` defined, an entry w
     # type:    array<string>, string, bool, int, None
     default = ["int{}"] # optional
 
+    # which platform to include this setting on
+    # can be either any, linux or windows
+    # type:    string
+    # default: any
+    platform = "linux" #optional
+
   # minimal example
   [[config.foobar.settings]]
     type = "int"
@@ -120,11 +126,10 @@ and
 ```cpp
 // <build>/generated/cli.h
 #pragma once
-#include <string>
+#include <string_view>
 #include <unordered_map>
 #include <map>
 #include <optional>
-#include <string_view>
 
 namespace config {
 using namespace std::string_view_literals;
@@ -134,13 +139,13 @@ struct cli_option {
   std::string_view description = ""sv;
 };
 
-static const std::map<char, const std::string> cli_shorthands = {
+static const std::map<char, std::string_view> cli_shorthands = {
   // ...
   {'s', "foo"},
   // ...
 };
 
-static const std::unordered_map<const std::string, cli_option> cli_map = {
+static const std::unordered_map<std::string_view, cli_option> cli_map = {
     // ...
     {"foo",
      {
