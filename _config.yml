@@ -2,6 +2,7 @@ github:
   repository_url: https://github.com/palliate/palliate
 
 remote_theme: just-the-docs/just-the-docs
+url: "https://palliate.io"
 
 aux_links:
   '<button type="button" name="button" class="btn btn-green">Palliate on Github</button>':
