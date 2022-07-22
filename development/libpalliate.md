@@ -7,7 +7,7 @@ has_children: true
 permalink: /development/libpalliate
 ---
 
-## libpalliate
+# libpalliate
 
 This page contains documentation regarding libpalliate, palliate's core library that is supposed to be included in all plugins too.
 

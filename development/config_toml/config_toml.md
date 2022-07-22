@@ -1,9 +1,9 @@
 ---
 layout: default
 title: config.toml
-has_children: true
-nav_order: 22
 parent: Development
+nav_order: 22
+has_children: true
 permalink: /development/config_toml
 ---
 
