@@ -28,7 +28,6 @@ For the Python subprojects the following linters and tools are active:
 For the C++ subprojects the following linters and tools are active:
 * [clang-format](https://clang.llvm.org/docs/ClangFormat.html)
 * [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
-* [include-what-you-use](https://include-what-you-use.org/)
 
 Please install [Trunk](https://trunk.io/products/check) or the corresponding VSCode Extension. Some useful commands:
 * `trunk check` to run the linter jobs
